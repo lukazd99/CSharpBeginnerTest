@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Web;
 
 namespace CSharpBeginnerTest
 {
@@ -14,6 +15,11 @@ namespace CSharpBeginnerTest
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void referenceLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // TODO: Set Redirection to https://www.w3schools.com/cs/cs_quiz.asp
         }
     }
 }
