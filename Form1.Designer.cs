@@ -30,67 +30,67 @@ namespace CSharpBeginnerTest
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.instructionTitleLabel = new System.Windows.Forms.Label();
-            this.instructionLabel1 = new System.Windows.Forms.Label();
-            this.referenceLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.instructionsLabel2 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelInstructions = new System.Windows.Forms.Label();
+            this.labelInstructionsDesc1 = new System.Windows.Forms.Label();
+            this.linkLabelw3Reference = new System.Windows.Forms.LinkLabel();
+            this.labelInstructionsDesc2 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // titleLabel
+            // labelTitle
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
-            this.titleLabel.Location = new System.Drawing.Point(43, 41);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(159, 45);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "C# Quiz";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
+            this.labelTitle.Location = new System.Drawing.Point(43, 41);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(159, 45);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "C# Quiz";
             // 
-            // instructionTitleLabel
+            // labelInstructions
             // 
-            this.instructionTitleLabel.AutoSize = true;
-            this.instructionTitleLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
-            this.instructionTitleLabel.Location = new System.Drawing.Point(46, 232);
-            this.instructionTitleLabel.Name = "instructionTitleLabel";
-            this.instructionTitleLabel.Size = new System.Drawing.Size(132, 25);
-            this.instructionTitleLabel.TabIndex = 1;
-            this.instructionTitleLabel.Text = "Instructions:";
+            this.labelInstructions.AutoSize = true;
+            this.labelInstructions.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
+            this.labelInstructions.Location = new System.Drawing.Point(46, 232);
+            this.labelInstructions.Name = "labelInstructions";
+            this.labelInstructions.Size = new System.Drawing.Size(132, 25);
+            this.labelInstructions.TabIndex = 1;
+            this.labelInstructions.Text = "Instructions:";
             // 
-            // instructionLabel1
+            // labelInstructionsDesc1
             // 
-            this.instructionLabel1.AutoSize = true;
-            this.instructionLabel1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
-            this.instructionLabel1.Location = new System.Drawing.Point(47, 109);
-            this.instructionLabel1.Name = "instructionLabel1";
-            this.instructionLabel1.Size = new System.Drawing.Size(382, 66);
-            this.instructionLabel1.TabIndex = 2;
-            this.instructionLabel1.Text = "The test contains 25 multiple choice questions\n and there is no time limit.\nThe i" +
-    "dentical test can be found on:";
+            this.labelInstructionsDesc1.AutoSize = true;
+            this.labelInstructionsDesc1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
+            this.labelInstructionsDesc1.Location = new System.Drawing.Point(47, 109);
+            this.labelInstructionsDesc1.Name = "labelInstructionsDesc1";
+            this.labelInstructionsDesc1.Size = new System.Drawing.Size(382, 66);
+            this.labelInstructionsDesc1.TabIndex = 2;
+            this.labelInstructionsDesc1.Text = "The test contains 25 multiple choice questions\r\n and there is no time limit.\r\nThe" +
+    " identical test can be found on:";
             // 
-            // referenceLinkLabel
+            // linkLabelw3Reference
             // 
-            this.referenceLinkLabel.AutoSize = true;
-            this.referenceLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.referenceLinkLabel.Location = new System.Drawing.Point(47, 188);
-            this.referenceLinkLabel.Name = "referenceLinkLabel";
-            this.referenceLinkLabel.Size = new System.Drawing.Size(333, 20);
-            this.referenceLinkLabel.TabIndex = 3;
-            this.referenceLinkLabel.TabStop = true;
-            this.referenceLinkLabel.Text = "https://www.w3schools.com/cs/cs_quiz.asp";
-            this.referenceLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.referenceLinkLabel_LinkClicked);
+            this.linkLabelw3Reference.AutoSize = true;
+            this.linkLabelw3Reference.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabelw3Reference.Location = new System.Drawing.Point(47, 188);
+            this.linkLabelw3Reference.Name = "linkLabelw3Reference";
+            this.linkLabelw3Reference.Size = new System.Drawing.Size(333, 20);
+            this.linkLabelw3Reference.TabIndex = 3;
+            this.linkLabelw3Reference.TabStop = true;
+            this.linkLabelw3Reference.Text = "https://www.w3schools.com/cs/cs_quiz.asp";
+            this.linkLabelw3Reference.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelw3Reference_LinkClicked);
             // 
-            // instructionsLabel2
+            // labelInstructionsDesc2
             // 
-            this.instructionsLabel2.AutoSize = true;
-            this.instructionsLabel2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.instructionsLabel2.Location = new System.Drawing.Point(47, 275);
-            this.instructionsLabel2.Name = "instructionsLabel2";
-            this.instructionsLabel2.Size = new System.Drawing.Size(547, 76);
-            this.instructionsLabel2.TabIndex = 4;
-            this.instructionsLabel2.Text = resources.GetString("instructionsLabel2.Text");
+            this.labelInstructionsDesc2.AutoSize = true;
+            this.labelInstructionsDesc2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.labelInstructionsDesc2.Location = new System.Drawing.Point(47, 275);
+            this.labelInstructionsDesc2.Name = "labelInstructionsDesc2";
+            this.labelInstructionsDesc2.Size = new System.Drawing.Size(547, 76);
+            this.labelInstructionsDesc2.TabIndex = 4;
+            this.labelInstructionsDesc2.Text = resources.GetString("labelInstructionsDesc2.Text");
             // 
             // btnStart
             // 
@@ -100,6 +100,7 @@ namespace CSharpBeginnerTest
             this.btnStart.TabIndex = 5;
             this.btnStart.Text = "START TEST";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnClose
             // 
@@ -109,6 +110,7 @@ namespace CSharpBeginnerTest
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
@@ -117,11 +119,11 @@ namespace CSharpBeginnerTest
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.instructionsLabel2);
-            this.Controls.Add(this.referenceLinkLabel);
-            this.Controls.Add(this.instructionLabel1);
-            this.Controls.Add(this.instructionTitleLabel);
-            this.Controls.Add(this.titleLabel);
+            this.Controls.Add(this.labelInstructionsDesc2);
+            this.Controls.Add(this.linkLabelw3Reference);
+            this.Controls.Add(this.labelInstructionsDesc1);
+            this.Controls.Add(this.labelInstructions);
+            this.Controls.Add(this.labelTitle);
             this.Name = "Form1";
             this.Text = "C# Beginner Test";
             this.ResumeLayout(false);
@@ -131,11 +133,11 @@ namespace CSharpBeginnerTest
 
         #endregion
 
-        private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Label instructionTitleLabel;
-        private System.Windows.Forms.Label instructionLabel1;
-        private System.Windows.Forms.LinkLabel referenceLinkLabel;
-        private System.Windows.Forms.Label instructionsLabel2;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelInstructions;
+        private System.Windows.Forms.Label labelInstructionsDesc1;
+        private System.Windows.Forms.LinkLabel linkLabelw3Reference;
+        private System.Windows.Forms.Label labelInstructionsDesc2;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnClose;
     }

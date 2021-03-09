@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Web;
 
 namespace CSharpBeginnerTest
 {
@@ -17,9 +16,19 @@ namespace CSharpBeginnerTest
             InitializeComponent();
         }
 
-        private void referenceLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            // TODO: Set Redirection to https://www.w3schools.com/cs/cs_quiz.asp
+            Application.Exit();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            // TODO: Start the quiz
+        }
+
+        private void linkLabelw3Reference_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.w3schools.com/cs/cs_quiz.asp");
         }
     }
 }
