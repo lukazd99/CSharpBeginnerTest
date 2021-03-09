@@ -1,7 +1,7 @@
 ﻿
 namespace CSharpBeginnerTest
 {
-    partial class Form1
+    partial class FormBegin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CSharpBeginnerTest
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBegin));
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelInstructions = new System.Windows.Forms.Label();
             this.labelInstructionsDesc1 = new System.Windows.Forms.Label();
@@ -112,7 +112,7 @@ namespace CSharpBeginnerTest
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Form1
+            // FormBegin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,7 +124,7 @@ namespace CSharpBeginnerTest
             this.Controls.Add(this.labelInstructionsDesc1);
             this.Controls.Add(this.labelInstructions);
             this.Controls.Add(this.labelTitle);
-            this.Name = "Form1";
+            this.Name = "FormBegin";
             this.Text = "C# Beginner Test";
             this.ResumeLayout(false);
             this.PerformLayout();

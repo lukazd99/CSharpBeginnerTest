@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace CSharpBeginnerTest
 {
-    public partial class Form1 : Form
+    public partial class FormBegin : Form
     {
-        public Form1()
+        public FormBegin()
         {
             InitializeComponent();
         }
@@ -23,7 +23,9 @@ namespace CSharpBeginnerTest
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            // TODO: Start the quiz
+            FormQuiz formQuiz = new FormQuiz();
+            formQuiz.Show();
+            this.Hide();
         }
 
         private void linkLabelw3Reference_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
