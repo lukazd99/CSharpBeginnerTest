@@ -17,39 +17,7 @@ namespace CSharpBeginnerTest
         public FormQuiz()
         {
             InitializeComponent();
-
-            readFile();
-        }
-
-
-        //Testing file reading
-        private void readFile()
-        {
-            string line;
-            StreamReader sr = null;
-            try
-            {
-                //Pass the file path and file name to the StreamReader constructor
-                sr = new StreamReader(@"C:\Work\C# Lecturing\CSharpBeginnerTest\Questions.txt");
-                //Read the first line of text
-                line = sr.ReadLine();
-                //Continue to read until you reach end of file
-                //close the file
-                sr.Close();
-                MessageBox.Show(line);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Exception: \n" + e.Message);
-            }
-            finally
-            {
-                MessageBox.Show("Executing finally block.");
-                if(sr != null)
-                {
-                    sr.Close();
-                }
-            }
+            createQuestion(1);
         }
 
         private void btnSubmitAnswer_Click(object sender, EventArgs e)
@@ -58,12 +26,41 @@ namespace CSharpBeginnerTest
 
         private void createQuestion(int questionNumber)
         {
-           
+            #region createQuestion
+            string questionString;
+            StreamReader sr = null;
+            try
+            {
+                //Pass the file path and file name to the StreamReader constructor
+                sr = new StreamReader(@"C:\Work\C# Lecturing\CSharpBeginnerTest\Questions.txt");
+
+                int i = 1;
+                while (i != questionNumber){
+                    sr.ReadLine();
+                }
+                questionString = sr.ReadLine();
+                labelQuestion.Text = questionString;
+
+                sr.Close();
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception: \n" + e.Message);
+                Application.Exit();
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            #endregion createQuestion
         }
 
-        private void FormQuiz_Load(object sender, EventArgs e)
+        private void createAnswers(int questionNum)
         {
-            createQuestion(1);
 
         }
 

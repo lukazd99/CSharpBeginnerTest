@@ -131,18 +131,17 @@ namespace CSharpBeginnerTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 450);
+            this.ClientSize = new System.Drawing.Size(562, 450);
             this.Controls.Add(this.panelAnswers);
             this.Controls.Add(this.labelQuestion);
             this.Controls.Add(this.btnSubmitAnswer);
             this.Name = "FormQuiz";
             this.Text = "Quiz";
-            this.Load += new System.EventHandler(this.FormQuiz_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.quizForm_FormClosing);
             this.panelAnswers.ResumeLayout(false);
             this.panelAnswers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormClosing += new FormClosingEventHandler(quizForm_FormClosing);
 
         }
 
