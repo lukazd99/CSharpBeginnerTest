@@ -57,11 +57,84 @@ namespace CSharpBeginnerTest
                 }
             }
             #endregion createQuestion
+            createAnswers(questionNumber);
         }
 
         private void createAnswers(int questionNum)
         {
+            int numberOfAnswers = getNumOfAnswers(questionNum);
+            if (numberOfAnswers == -1)
+            {
+                Application.Exit();
+            }
 
+
+            showRadioButtons(numberOfAnswers);
+
+
+        }
+
+        private void setRadioButtonText(RadioButton radioButton, string text)
+        {
+            radioButton.Text = text;
+        }
+
+        private void showRadioButtons(int numberOfButtons)
+        {
+            switch (numberOfButtons)
+            {
+                case 2:
+                    radioBtnAnswer1.Visible = true;
+                    radioBtnAnswer2.Visible = true;
+                    radioBtnAnswer3.Visible = false;
+                    radioBtnAnswer4.Visible = false;
+                    break;
+                case 3:
+                    radioBtnAnswer1.Visible = true;
+                    radioBtnAnswer2.Visible = true;
+                    radioBtnAnswer3.Visible = true;
+                    radioBtnAnswer4.Visible = false;
+                    break;
+                case 4:
+                    radioBtnAnswer1.Visible = true;
+                    radioBtnAnswer2.Visible = true;
+                    radioBtnAnswer3.Visible = true;
+                    radioBtnAnswer4.Visible = true;
+                    break;
+            }
+        }
+
+        int getNumOfAnswers(int questionNumber)
+        {
+            int result;
+            StreamReader sr = null;
+            try
+            {
+                //Pass the file path and file name to the StreamReader constructor
+                sr = new StreamReader(@"C:\Work\C# Lecturing\CSharpBeginnerTest\NumOfAnswers.txt");
+
+                int i = 1;
+                while (i != questionNumber)
+                {
+                    sr.ReadLine();
+                }
+                result = int.Parse(sr.ReadLine());
+                sr.Close();
+                return result;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception: \n" + e.Message);
+                return -1;
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
         }
 
         bool checkAnswer(string answer)
