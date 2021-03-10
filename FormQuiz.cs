@@ -18,10 +18,7 @@ namespace CSharpBeginnerTest
         {
             InitializeComponent();
 
-            //testing
-            XMLReader xmlReader = new XMLReader();
-            string xmlResultString = xmlReader.get_questions_from_xml();
-            MessageBox.Show(xmlResultString);
+            
         }
 
         private void btnSubmitAnswer_Click(object sender, EventArgs e)
