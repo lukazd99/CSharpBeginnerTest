@@ -76,6 +76,7 @@ namespace CSharpBeginnerTest
 
         private void setRadioButtonText(RadioButton radioButton, string text)
         {
+            
             radioButton.Text = text;
         }
 
@@ -104,7 +105,7 @@ namespace CSharpBeginnerTest
             }
         }
 
-        int getNumOfAnswers(int questionNumber)
+        private int getNumOfAnswers(int questionNumber)
         {
             int result;
             StreamReader sr = null;
@@ -137,7 +138,7 @@ namespace CSharpBeginnerTest
             }
         }
 
-        bool checkAnswer(string answer)
+        private bool checkAnswer(string answer)
         {
             return answer == "true";
         }
