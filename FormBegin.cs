@@ -25,7 +25,7 @@ namespace CSharpBeginnerTest
         {
             FormQuiz formQuiz = new FormQuiz();
             formQuiz.Show();
-            this.Hide();
+            Hide();
         }
 
         private void linkLabelw3Reference_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

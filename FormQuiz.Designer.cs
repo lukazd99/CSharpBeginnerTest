@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace CSharpBeginnerTest
 {
     partial class FormQuiz
@@ -21,6 +23,11 @@ namespace CSharpBeginnerTest
             base.Dispose(disposing);
         }
 
+        private void quizForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -34,10 +41,10 @@ namespace CSharpBeginnerTest
             this.labelQuestion = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelAnswers = new System.Windows.Forms.Panel();
-            this.radioBtnAnswer1 = new System.Windows.Forms.RadioButton();
-            this.radioBtnAnswer2 = new System.Windows.Forms.RadioButton();
-            this.radioBtnAnswer3 = new System.Windows.Forms.RadioButton();
             this.radioBtnAnswer4 = new System.Windows.Forms.RadioButton();
+            this.radioBtnAnswer3 = new System.Windows.Forms.RadioButton();
+            this.radioBtnAnswer2 = new System.Windows.Forms.RadioButton();
+            this.radioBtnAnswer1 = new System.Windows.Forms.RadioButton();
             this.panelAnswers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,15 +56,16 @@ namespace CSharpBeginnerTest
             this.btnSubmitAnswer.TabIndex = 0;
             this.btnSubmitAnswer.Text = "Next";
             this.btnSubmitAnswer.UseVisualStyleBackColor = true;
+            this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click);
             // 
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Location = new System.Drawing.Point(65, 67);
+            this.labelQuestion.Location = new System.Drawing.Point(44, 58);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(46, 17);
+            this.labelQuestion.Size = new System.Drawing.Size(100, 17);
             this.labelQuestion.TabIndex = 1;
-            this.labelQuestion.Text = "label1";
+            this.labelQuestion.Text = "QuestionLabel";
             // 
             // notifyIcon1
             // 
@@ -75,45 +83,49 @@ namespace CSharpBeginnerTest
             this.panelAnswers.Size = new System.Drawing.Size(149, 167);
             this.panelAnswers.TabIndex = 2;
             // 
-            // radioBtnAnswer1
+            // radioBtnAnswer4
             // 
-            this.radioBtnAnswer1.AutoSize = true;
-            this.radioBtnAnswer1.Location = new System.Drawing.Point(3, 3);
-            this.radioBtnAnswer1.Name = "radioBtnAnswer1";
-            this.radioBtnAnswer1.Size = new System.Drawing.Size(17, 16);
-            this.radioBtnAnswer1.TabIndex = 0;
-            this.radioBtnAnswer1.TabStop = true;
-            this.radioBtnAnswer1.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnAnswer2
-            // 
-            this.radioBtnAnswer2.AutoSize = true;
-            this.radioBtnAnswer2.Location = new System.Drawing.Point(3, 41);
-            this.radioBtnAnswer2.Name = "radioBtnAnswer2";
-            this.radioBtnAnswer2.Size = new System.Drawing.Size(17, 16);
-            this.radioBtnAnswer2.TabIndex = 1;
-            this.radioBtnAnswer2.TabStop = true;
-            this.radioBtnAnswer2.UseVisualStyleBackColor = true;
+            this.radioBtnAnswer4.AutoSize = true;
+            this.radioBtnAnswer4.Location = new System.Drawing.Point(3, 120);
+            this.radioBtnAnswer4.Name = "radioBtnAnswer4";
+            this.radioBtnAnswer4.Size = new System.Drawing.Size(83, 21);
+            this.radioBtnAnswer4.TabIndex = 3;
+            this.radioBtnAnswer4.TabStop = true;
+            this.radioBtnAnswer4.Text = "Answer4";
+            this.radioBtnAnswer4.UseVisualStyleBackColor = true;
             // 
             // radioBtnAnswer3
             // 
             this.radioBtnAnswer3.AutoSize = true;
             this.radioBtnAnswer3.Location = new System.Drawing.Point(3, 81);
             this.radioBtnAnswer3.Name = "radioBtnAnswer3";
-            this.radioBtnAnswer3.Size = new System.Drawing.Size(17, 16);
+            this.radioBtnAnswer3.Size = new System.Drawing.Size(83, 21);
             this.radioBtnAnswer3.TabIndex = 2;
             this.radioBtnAnswer3.TabStop = true;
+            this.radioBtnAnswer3.Text = "Answer3";
             this.radioBtnAnswer3.UseVisualStyleBackColor = true;
             // 
-            // radioBtnAnswer4
+            // radioBtnAnswer2
             // 
-            this.radioBtnAnswer4.AutoSize = true;
-            this.radioBtnAnswer4.Location = new System.Drawing.Point(3, 120);
-            this.radioBtnAnswer4.Name = "radioBtnAnswer4";
-            this.radioBtnAnswer4.Size = new System.Drawing.Size(17, 16);
-            this.radioBtnAnswer4.TabIndex = 3;
-            this.radioBtnAnswer4.TabStop = true;
-            this.radioBtnAnswer4.UseVisualStyleBackColor = true;
+            this.radioBtnAnswer2.AutoSize = true;
+            this.radioBtnAnswer2.Location = new System.Drawing.Point(3, 41);
+            this.radioBtnAnswer2.Name = "radioBtnAnswer2";
+            this.radioBtnAnswer2.Size = new System.Drawing.Size(83, 21);
+            this.radioBtnAnswer2.TabIndex = 1;
+            this.radioBtnAnswer2.TabStop = true;
+            this.radioBtnAnswer2.Text = "Answer2";
+            this.radioBtnAnswer2.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnAnswer1
+            // 
+            this.radioBtnAnswer1.AutoSize = true;
+            this.radioBtnAnswer1.Location = new System.Drawing.Point(3, 3);
+            this.radioBtnAnswer1.Name = "radioBtnAnswer1";
+            this.radioBtnAnswer1.Size = new System.Drawing.Size(83, 21);
+            this.radioBtnAnswer1.TabIndex = 0;
+            this.radioBtnAnswer1.TabStop = true;
+            this.radioBtnAnswer1.Text = "Answer1";
+            this.radioBtnAnswer1.UseVisualStyleBackColor = true;
             // 
             // FormQuiz
             // 
@@ -125,10 +137,12 @@ namespace CSharpBeginnerTest
             this.Controls.Add(this.btnSubmitAnswer);
             this.Name = "FormQuiz";
             this.Text = "Quiz";
+            this.Load += new System.EventHandler(this.FormQuiz_Load);
             this.panelAnswers.ResumeLayout(false);
             this.panelAnswers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.FormClosing += new FormClosingEventHandler(quizForm_FormClosing);
 
         }
 
